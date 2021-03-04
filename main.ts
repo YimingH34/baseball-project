@@ -7,9 +7,20 @@ input.onButtonPressed(Button.AB, function () {
 input.onButtonPressed(Button.B, function () {
     strike += 1
 })
-let out = 0
-let ball = 0
+input.onGesture(Gesture.Shake, function () {
+    basic.showString("Ball")
+    basic.showNumber(ball)
+    basic.showString("Strike")
+    basic.showNumber(strike)
+    basic.showString("Out")
+    basic.showNumber(out)
+})
 let strike = 0
+let ball = 0
+let out = 0
+out = 0
+ball = 0
+strike = 0
 basic.forever(function () {
     if (ball == 4) {
         ball = 0
@@ -29,12 +40,6 @@ basic.forever(function () {
         basic.showString("Out")
         basic.showString("Out")
     }
-    basic.showString("Ball")
-    basic.showNumber(ball)
-    basic.showString("Strike")
-    basic.showNumber(strike)
-    basic.showString("Out")
-    basic.showNumber(out)
 })
 basic.forever(function () {
 	
